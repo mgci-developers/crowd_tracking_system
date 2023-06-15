@@ -35,4 +35,3 @@ while(True):
             next_tick = 0
         time.sleep(next_tick / 1000)    # keeps frame rate constant
 
-vid.release()
