@@ -16,10 +16,8 @@
 
 <form>
     <p>Please select room to track:</p>
-    {%for i in kvlist%}
-    <input type="radio" id="roomcode" name="roomcode" value="{{i[1]}}">
-    <label for="roomcode">{{i[0]}}</label><br>
-    {%endfor%}
+    <input type="radio" id="roomcode" name="roomcode" value="eee">
+    <label for="roomcode">eee</label><br>
 </form>
 
 <div id="message" class="block"></div>
@@ -50,13 +48,13 @@ function getsocketdata() {
     var header = "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB" + roomcode;
     console.log(header);
     if ("WebSocket" in window) {
-        ws = new WebSocket("ws://localhost:8765");       
+        ws = new WebSocket("ws://localhost:808\\\\\\\\\\\\\0");       
         ws.onopen = function() {
             ws.send(header);
         };       
         ws.onmessage = function (evt) { 
             var received_msg = evt.data;
-            document.getElementById("message").innerHTML = "<p> There are " + received_msg  + " people in the" + roomcode + " </p>"
+            document.getElementById("message").innerHTML = "<p> There are " + received_msg  + " people </p>"
             ws.send(header);
 
         };
