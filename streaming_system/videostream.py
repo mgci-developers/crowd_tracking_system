@@ -8,7 +8,7 @@ import base64
 
 NS_TO_MS: int = 1000000 # defines configurations
 FPS = 30
-SERVER_ADDRESS = "ws://localhost:8765"
+SERVER_ADDRESS = "ws://192.168.137.217:8765"
 
 vid = cv2.VideoCapture(0) # opens camera
 numframes = 0 # keeps count of frames transmitted
